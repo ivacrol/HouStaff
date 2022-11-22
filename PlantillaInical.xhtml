@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+
+        <script src="https://kit.fontawesome.com/3fca70efae.js" crossorigin="anonymous"></script>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <h:outputStylesheet name="/cssLogin/home.css"/>
+        <h:outputStylesheet name="/cssLogin/main.css"/>
+        <h:outputStylesheet name="/cssLogin/nav.css"/>
+        <h:outputStylesheet name="/cssLogin/normalize.css"/>
+
+        <title>HouSTaff</title>
+    </h:head>
+
+    <body>
+        <!--Prueba comentatio-->
+        <div class="cuerpo" id="cuerpo">
+            <h:panelGrid rendered="#{!usuarioController.mostpanelp}" columns="1" width="100%" >
+
+                <!--BARRA DE NAVEGACION INTELIGENTE-->
+                <nav>
+                    <input type="checkbox" id="check"/>
+                    <label for="check" class="checkbtn">
+                        <i class="fas fa-bars"></i>
+                    </label>
+                    <a href="#" class="enlace">
+                        <img src="resources/ImagenesLogin/LogoNav.png" alt="" class="logo"/>
+                    </a>
+                    <ul>
+
+                        <li><a href="registrar.html" >Regístrate</a></li>
+
+                    </ul>
+                </nav>
+
+                <!--Cuerpo-->
+                <main class="login-design">
+                    <div class="waves">
+                        <img src="resources/ImagenesLogin/loginPerson.png" alt=""> </img>
+                    </div>
+                    <div class="login">
+                        <div class="login-data">
+                            <img src="resources/ImagenesLogin/collab.png" alt="" />
+                            <h1>Inicio de Sesión</h1>
+                            <form action="#" class="login-form">
+                                <div class="input-group">
+                                    <label class="input-fill" style="position: relative;top: -160px;left: 200px">
+                                        <!--<input type="email" name="email" id="email" required />-->
+                                        <span class="input-label">Usuario</span>
+                                        <i class="fas fa-envelope"></i>
+
+                                        <br></br>
+
+
+                                    </label>
+                                </div>
+                                <div class="input-group">
+                                    <label class="input-fill" style="position: relative;top: -83px;left: 200px">
+                                        <!-- <input type="password" name="password" id="password" required /> -->                     
+                                        <span class="input-label">Contraseña</span>
+                                        <i class="fas fa-lock"></i>
+
+                                    </label>
+                                </div>
+                                <a href="registrar.html">¿Necesitas una Cuenta?</a>
+                                <!-- <input type="submit" value="Iniciar Sesión" class="btn-login" /> -->
+
+
+                            </form>
+                        </div>
+                    </div>
+                </main>
+                <div>
+
+                    <h:commandButton class="botonIniciar" value="iniciar" action="#{usuarioController.iniciar()}" style="position: absolute ;top: 70% ;left: 76%" />
+                    <h:commandButton class="botonRegistar" value="registrarse" action="#{usuarioController.registrarse()}" style="position: absolute ;top: 70% ;left: 87%"/>
+
+                    <h:inputText value="#{usuarioController.usuario.acceso}"  style=" position: absolute; top: 310px;left: 1007px"/>
+                    <h:inputText value="#{usuarioController.usuario.contrasena}" style=" position: absolute; top: 400px;left: 1007px"/>
+
+
+                </div>
+               
+
+
+                <!-- <div id="content" class="center_content">-->
+                <!-- <ui:insert name="content">-->
+                <!-- <h:graphicImage width="1300" height="650" value="../Imagenes/imagenprincipal.jpg" />-->
+                <!-- </ui:insert> -->
+                <!-- </div>-->
+            </h:panelGrid>
+            <h:panelGrid rendered="#{usuarioController.mostpanelp}" columns="1" width="1300">
+                <ui:include src="#{usuarioController.paginaActual}" />
+            </h:panelGrid>
+            <p:growl/>
+        </div>
+    </body>         
+
+</html>

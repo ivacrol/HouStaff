@@ -1,0 +1,145 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 27/05/2021, 01:03:50 PM
+    Author     : User
+*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+ 
+}
+body{
+  margin: 0;
+  padding: 0;
+  background: #afc4ef;
+  height: 100vh;
+  overflow: auto;
+}
+.center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  background: #c9d9f2;
+  border-radius: 10px;
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+}
+.center h1{
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 1px solid silver;
+}
+
+.icono{
+    position: relative;
+top: 8px;
+    
+}
+
+.form{
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+div .txt_field{
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  margin: 30px 0;
+}
+.txt_field input{
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+}
+.txt_field label{
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: #020308;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+  transition: .5s;
+  
+}
+.txt_field span:before{
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #6a44ef;
+  transition: .5s;
+}
+
+h2{
+    
+    text-align: center;
+    color: #1a2130; 
+}
+
+.txt_field input[type="text"]:focus ~ label,
+.txt_field input[type="text"]:valid animateMotion label{
+  top: -5px;
+  color: #6a44ef;
+}
+.txt_field input[type="text"]:focus ~ span::before,
+.txt_field input[type="text"]:valid animateMotion span::before{
+  width: 100%;
+}
+
+.txt_field input[type="password"]:focus ~ label,
+.txt_field input[type="password"]:valid animateMotion label{
+  top: -5px;
+  color: #6a44ef;
+}
+.txt_field input[type="password"]:focus ~ span::before,
+.txt_field input[type="password"]:valid animateMotion span::before{
+  width: 100%;
+}
+
+
+
+.pass{
+  margin: -5px 0 20px 5px;
+  color: #020308;
+  cursor: pointer;
+}
+.pass:hover{
+  text-decoration: underline;
+}
+
+
+
+input[type="submit"]{
+  width: 100%;
+  height: 50px;
+  border: 1px solid;
+  background: #5576e6;
+  border-radius: 25px;
+  font-size: 18px;
+  color: #e9f4fb;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+  margin-bottom: 10px;
+}
+input[type="submit"]:hover{
+  border-color: #5576e6;
+  transition: .5s;
+}
+
+
+

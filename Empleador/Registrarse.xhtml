@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body style="background-color: white">
+        
+      
+
+            <div >
+                <h:panelGrid columns="2">
+                    <h:form >
+                        <p:fieldset legend="Datos Principales" style="height: 400px;width: 400px">
+                            <h:panelGrid columns="2">
+
+                                <p:outputLabel  value="Identificacion"/>
+
+                                <p:inputText value="#{usuarioController.empleador.identificacion}"/>
+
+
+                                <p:outputLabel  value="Nombre"/>
+
+                                <p:inputText value="#{usuarioController.empleador.nombre}"/>
+
+
+                                <p:outputLabel  value="Apellido"/>
+
+                                <p:inputText value="#{usuarioController.empleador.apellido}"/>
+
+
+                                <p:outputLabel  value="Direccion"/>
+
+                                <p:inputText value="#{usuarioController.empleador.direccion}"/>
+
+
+                                <p:outputLabel  value="Tipo de Hogar"/>
+
+                                <p:inputText value="#{usuarioController.empleador.tipohogar}"/>
+
+                                <p:outputLabel  value="Fecha de Nacimiento"/>
+
+                                <p:inputText value="#{usuarioController.empleador.fechaNacimiento}"/>
+
+
+
+                                <p:outputLabel  value="Sexo"/>
+                                <p:selectOneMenu id="option" value="#{usuarioController.empleador.sexo}">
+                                    <f:selectItem itemLabel="Select One" itemValue=""/>
+                                    <f:selectItem itemLabel="Masculino" itemValue="Masculino"/>
+                                    <f:selectItem itemLabel="Femenino" itemValue="Femenino"/>
+
+                                    <f:facet name="footer">
+                                        <p:divider styleClass="mt-0" />
+                                        <h:outputText value="2 options" style="font-weight:bold;"/>
+                                    </f:facet>
+                                </p:selectOneMenu>
+
+                            </h:panelGrid>
+                        </p:fieldset> 
+                    </h:form>
+
+                    <h:form >
+
+                        <p:fieldset legend="Datos usuario" style="height: 200px;width: 400px;position: absolute;top: 55px;right : 0%">
+                            <h:panelGrid columns="2">
+                                <p:outputLabel  value="Login"/>
+
+                                <p:inputText value="#{usuarioController.empleador.acceso}"/>
+
+
+                                <p:outputLabel  value="Contraseña"/>
+
+                                <p:inputText value="#{usuarioController.empleador.contrasena}"/>
+
+
+                                <p:outputLabel  value="Email"/>
+
+                                <p:inputText value="#{usuarioController.empleador.email}"/>
+
+
+
+                            </h:panelGrid>
+                        </p:fieldset>
+
+                    </h:form>
+
+                </h:panelGrid>
+
+
+            </div>
+
+        <h:commandButton value="Registrar" action="#{usuarioController.registrarEmpleador()}" class="empleadoMenu" />
+            <h:commandButton value="Cerrar" class="empleadoMenu" action="#{usuarioController.cerrar()}"/>
+            
+    </h:body>
+
+</html>
+

@@ -1,0 +1,141 @@
+body {
+  font-family: 'poppins regular', sans-serif;
+}
+
+.login-design {
+  margin-top: 1px;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  height: 88vh;
+}
+
+.waves {
+  background-image: url('../assets/wave.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.waves1 {
+  background-image: url('../assets/wave1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-data {
+  text-align: center;
+  width: 60%;
+}
+
+.login-data h1 {
+  font-weight: 300;
+  color: #848f9a;
+}
+
+.input-group {
+  position: relative;
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 0.5rem;
+}
+
+.input-fill input {
+  border: none;
+  border-bottom: 3px solid #848f9a;
+  width: 100%;
+  height: 2rem;
+  font-size: 0.9rem;
+  padding-left: 2rem;
+  line-height: 147.6%;
+  padding-top: 2.5rem;
+  padding-bottom: 1rem;
+}
+
+.input-fill input:focus {
+  outline: none;
+  border-color: #57228c;
+}
+
+.input-fill input:hover {
+  background-color: #e9ecef;
+}
+
+.input-fill input:focus + .input-label {
+  top: 0;
+  margin-bottom: 2rem;
+  color: #57228c;
+}
+
+.input-fill input:focus ~ i {
+  color: #57228c;
+}
+
+.input-fill .input-label {
+  position: absolute;
+  top: 15px;
+  left: 28px;
+  line-height: 147.6%;
+  color: #848f9a;
+  transition: top 0.2s;
+  font-weight: 700;
+}
+
+.input-label{
+  font-size: small;
+}
+
+.input-fill i {
+  position: absolute;
+  top: 19px;
+  left: 0;
+  color: #848f9a;
+  font-size: 1.5rem;
+}
+
+.login-form a {
+  display: block;
+  width: 85%;
+  text-align: right;
+  text-decoration: none;
+  color: #848f9a;
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+  transition: 0.3s ease-in-out all;
+  font-size: 15px;
+}
+
+.login-form a:hover {
+  color: #57228c;
+}
+
+.btn-login {
+  border-radius: 3rem;
+  width: 45%;
+  border: 1px solid #57228c;
+  line-height: 1.6rem;
+  font-size: 1.3rem;
+  background-color: #57228c;
+  color: #ffffff;
+  padding: 0.5rem 0;
+  transition: 0.3s ease-in-out all;
+  font-weight: 500;
+}
+
+.btn-login:hover {
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #57228c;
+}

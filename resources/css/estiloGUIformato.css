@@ -1,0 +1,120 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 29/10/2021, 02:45:56 PM
+    Author     : User
+*/
+
+body{
+    
+    overflow: auto;
+}
+
+h3{
+    
+    text-align: center;
+    
+}
+.container{
+    
+
+    
+    
+}
+
+.nav{
+    position: relative;
+    background: #d4d9ea;
+    width: 1300px;
+    height: 50px;
+
+   
+    top: -5px;
+   
+
+}
+
+.logo{
+    
+    position: absolute;
+    right: 2px;
+    top: 5px;
+    
+    
+}
+
+.icono{
+    
+   
+   top: 9px; 
+    
+}
+
+.contenedorBusquedanav{
+    
+    position: absolute;
+    background: white;
+    width: 400px;
+    height: 30px;
+   right: 450px; 
+   
+   top: 10px;
+    border-radius: 3%;
+}
+
+input[type="submit"].botonBusquedanav{
+    
+    width: 50px;
+    height: 30px;
+   
+    
+}
+
+.busquedanav{
+    
+    position: absolute;
+    top: 3px;
+    width: 347px;
+    
+    border-style: none;
+    
+}
+
+.separadornav{
+    position: absolute;
+     top: 4px;
+    left: 350px;
+    width: 2px;
+    height: 20px;
+    background: #78797e;
+}
+
+.menu{
+    background: #d4d9ea;        
+    padding: 3px;
+    float: left;
+}
+
+.menu{
+    margin: auto;
+    width: 15%;
+    height: 611px;
+    margin-top: -5px;
+    margin-bottom: -3px;  
+}
+
+
+.Funcionalidad{
+    position: relative;
+    background: #fff;  
+    left: 4px;
+  
+    float: left;
+    height: 78%;
+    width: 1097px;
+    margin-right:  -6px;
+    margin-top: 1px;
+}

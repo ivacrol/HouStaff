@@ -1,0 +1,86 @@
+.body{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #826DD9;
+}
+
+.cuerpoRegistro{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #826DD9;
+}
+
+.empleado{
+    background: #57228c;
+    color: white;
+    margin: 20px 40px;
+    border: 0px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px 2px #481879;
+    font-size: 20px;
+    width: 250px;
+    height: 90px;
+}
+
+.empleado :hover{
+    background-color: #481879;
+    transition: 1s;
+}
+
+.empleador{
+    background: #57228c;
+    color: white;
+    margin: 20px 40px;
+    border: 0px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px 2px #481879;
+    font-size: 20px;
+    width: 250px;
+    height: 90px;
+}
+
+.empleador :hover{
+    background-color: #481879;
+    transition: 1s;
+}
+
+
+
+
+.empleadoMenu{
+    background: #57228c;
+    color: white;
+    margin: 20px 0px;
+    border: 0px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px 2px #481879;
+    font-size: 20px;
+    width: 170px;
+    height: 40px;
+}
+
+.empleadoMenu :hover{
+    background-color: #481879;
+    transition: 1s;
+}
+
+.empleadorMenu{
+    background: #57228c;
+    color: white;
+    margin: 20px 40px;
+    border: 0px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px 2px #481879;
+    font-size: 20px;
+    width: 250px;
+    height: 90px;
+}
+
+.empleadorMenu :hover{
+    background-color: #481879;
+    transition: 1s;
+}

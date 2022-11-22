@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+
+    <h:head>
+        <title>TODO supply a title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+
+
+        <p:breadCrumb style="height: 50px;border: none">
+            <p:menuitem value="Empleado"/>
+            <p:menuitem value="Empleador"/>
+            <p:menuitem value="Contrato"/>
+
+        </p:breadCrumb>
+
+        <p:fieldset legend="Generar Contrato" style="height: 400px;width: 900px;left: 100px;position: absolute">
+
+            <h:panelGrid columns="4">
+
+                <h:outputText value="Fecha Inicio Contrato" />
+                <p:inputText value="#{usuarioController.contrato.fechaInicio}"/>
+
+                <h:outputText value="Fecha Fin Contrato" />
+                <p:inputText value="#{usuarioController.contrato.fechaFin}"/>
+
+                <h:outputText value="Informacion General Contrato" />
+                <p:inputTextarea value="#{usuarioController.contrato.descripcion}"/>
+
+                <h:outputText value="Sueldo" />
+                <p:inputText value="#{usuarioController.contrato.sueldo}"/>
+
+                
+                <h:commandButton value="Contratar" action="#{usuarioController.registraContrato()}"/> 
+
+            </h:panelGrid>
+
+        </p:fieldset>
+
+    </h:body>
+</html>

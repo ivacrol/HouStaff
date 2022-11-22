@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <head>
+        <title>TODO supply a title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+
+        <div class="grid-container">
+
+
+
+            <p:breadCrumb style="height: 50px;border: none">
+                <p:menuitem value="Empleado"/>
+                <p:menuitem value="Empleador"/>
+                <p:menuitem value="Mi Perfil"/>
+
+            </p:breadCrumb>
+
+
+
+
+
+            <div style="background-color: white; width: 1070px;height: 420px; top: -20px">
+
+
+                <h:panelGrid columns="2">
+                    <h:form >
+                        <p:fieldset legend="Datos Principales" style="height: 400px;width: 400px">
+                            <h:panelGrid columns="2">
+
+                                <p:outputLabel  value="Identificacion"/>
+                                <p:inplace>
+                                    <p:inputText value="#{usuarioController.empleado.identificacion}"/>
+                                </p:inplace>
+
+                                <p:outputLabel  value="Nombre"/>
+                                <p:inplace>
+                                    <p:inputText value="#{usuarioController.empleado.nombre}"/>
+                                </p:inplace>
+
+                                <p:outputLabel  value="Apellido"/>
+                                <p:inplace>
+                                    <p:inputText value="#{usuarioController.empleado.apellido}"/>
+                                </p:inplace>
+
+                                <p:outputLabel  value="Direccion"/>
+                                <p:inplace>
+                                    <p:inputText value="#{usuarioController.empleado.direccion}"/>
+                                </p:inplace>
+
+                                <p:outputLabel  value="Tipo de Trabajo"/>
+                                <p:inplace>
+                                    <p:inputText value="#{usuarioController.empleado.tipoTrabajo}"/>
+                                </p:inplace>
+
+
+                                <p:outputLabel  value="Sexo"/>
+                                <p:selectOneMenu id="option" value="#{usuarioController.empleado.sexo}">
+                                    <f:selectItem itemLabel="Select One" itemValue=""/>
+                                    <f:selectItem itemLabel="Masculino" itemValue="Masculino"/>
+                                    <f:selectItem itemLabel="Femenino" itemValue="Femenino"/>
+
+                                    <f:facet name="footer">
+                                        <p:divider styleClass="mt-0" />
+                                        <h:outputText value="2 options" style="font-weight:bold;"/>
+                                    </f:facet>
+                                </p:selectOneMenu>
+
+                                <p:outputLabel  value="Experiencia"/>
+                                <p:selectOneMenu id="option2" value="#{usuarioController.empleado.experiencia}">
+                                    <f:selectItem itemLabel="Select One" itemValue=""/>
+                                    <f:selectItem itemLabel="1 Año" itemValue="1 Año"/>
+                                    <f:selectItem itemLabel="2 Año" itemValue="2 Año"/>
+                                    <f:selectItem itemLabel="3 Año" itemValue="3 Año"/>
+                                    <f:selectItem itemLabel="Mas de 3 años" itemValue="Mas de 3 años"/>
+
+                                    <f:facet name="footer">
+                                        <p:divider styleClass="mt-0" />
+                                        <h:outputText value="4 options" style="font-weight:bold;"/>
+                                    </f:facet>
+                                </p:selectOneMenu>
+
+                            </h:panelGrid>
+                        </p:fieldset> 
+                    </h:form>
+
+                    <h:form >
+
+                        <p:fieldset legend="Datos usuario" style="height: 200px;width: 400px;position: absolute;top: 55px;right : 100px">
+                            <h:panelGrid columns="2">
+                                <p:outputLabel  value="Login"/>
+                                <p:inplace>
+                                    <p:inputText value="#{usuarioController.empleado.acceso}"/>
+                                </p:inplace>
+
+                                <p:outputLabel  value="Contraseña"/>
+                                <p:inplace>
+                                    <p:inputText value="#{usuarioController.empleado.contrasena}"/>
+                                </p:inplace>
+
+                                <p:outputLabel  value="Email"/>
+                                <p:inplace>
+                                    <p:inputText value="#{usuarioController.empleado.email}"/>
+                                </p:inplace>
+
+
+                            </h:panelGrid>
+                        </p:fieldset>
+
+                    </h:form>
+
+                </h:panelGrid>
+
+
+            </div>
+
+
+        </div>
+    </body>
+</html>

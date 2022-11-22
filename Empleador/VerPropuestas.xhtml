@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+    <h:head>
+
+        <title>a</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+
+
+        <p:breadCrumb style="height: 50px;border: none">
+            <p:menuitem value="Empleado"/>
+            <p:menuitem value="Empleado"/>
+            <p:menuitem value="Ver Propuestas"/>
+
+        </p:breadCrumb>
+
+
+        <p:scrollPanel mode="native" style="width:1080px;height:450px">
+
+
+            <h:panelGrid columns="3">
+                <p:panel rendered="#{!usuarioController.mostPanelPropuesta}" >     
+                    <h3>Propuestas de la Semana</h3>
+                    <p:dataGrid value="#{usuarioController.propuestas}" var="propuestas" >
+                        <p:panel >
+                            <p:panelGrid columns="1">
+                                <p:panel  header="Linea de Trabajo: #{propuestas.lineatrabajo}">
+                                    <h:commandButton  image="/Imagenes/Botones/propuestas.png" style="width: 150px;height: 100px ; position: relative; left: 10px;" action="#{usuarioController.seleccionarPropuesta(propuestas)}"/>
+                                </p:panel>
+                                <p:panelGrid columns="2">
+                                    <h:outputText value="id: #{propuestas.idpropuesta}"/>
+                                    <h:outputText value="Nombre Empleador  #{propuestas.nombreEmpleador}"/>
+                                </p:panelGrid>
+                            </p:panelGrid>
+                        </p:panel>
+                    </p:dataGrid>
+                </p:panel>
+            </h:panelGrid>
+
+
+            <p:panel rendered="#{usuarioController.mostPanelPropuesta}" > 
+                <h3>Propuesta</h3>
+                <p:panelGrid columns="3">
+                    <p:panel header=" Propuesta Presentada Por : #{usuarioController.propuesta.nombreEmpleador}">
+
+
+                        <p:panelGrid columns="3">
+
+                            <div class="card">
+                                <h3> Descripcion :</h3>
+                                <p:scrollPanel mode="native" style="width:350px;height:200px"  >
+
+                                    #{usuarioController.propuesta.descripcion}
+
+                                </p:scrollPanel>
+                            </div>
+
+                            <div class="card">
+                                <h3> Sueldo :</h3>
+
+                                #{usuarioController.propuesta.sueldo}
+
+
+                            </div>
+                            <div class="card">
+                                <h3> Modalidad de Pago :</h3>
+
+                                #{usuarioController.propuesta.modalidadPago}
+
+
+                            </div>
+
+
+                        </p:panelGrid>
+
+                    </p:panel>
+
+
+
+
+                </p:panelGrid>
+
+
+
+
+                <h:commandButton value="Postularse" action="#{usuarioController.crearPostulacion()}"/> 
+            </p:panel>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </p:scrollPanel>
+
+
+
+
+
+
+
+
+
+
+
+    </h:body>
+</html>
